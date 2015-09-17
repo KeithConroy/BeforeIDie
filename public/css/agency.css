@@ -1,3 +1,10 @@
+img.logo {
+  position: relative;
+  width: 215px;
+  top: 3px;
+}
+
+
 /*!
  * Start Bootstrap - Agency Bootstrap Theme (http://startbootstrap.com)
  * Code licensed under the Apache License v2.0.
