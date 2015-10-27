@@ -1,0 +1,75 @@
+// Place all the styles related to the wishes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+#header {
+  text-align: center;
+  >h1{
+  font-family: 'Allerta Stencil', sans-serif;
+  }
+}
+
+#newWish {
+  >input {
+    width: 80%;
+    text-align: center;
+    font-size: 1em;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-bottom: 2px solid #ffffff;
+    &:focus {
+      outline:none;
+    }
+  }
+}
+
+p {
+  margin: 0 0 5px 0;
+}
+
+.underline {
+  border-bottom: 2px solid white;
+  position: absolute;
+  left: 183px;
+  right: 0px;
+  top: 32px;
+}
+
+.muted {
+  color: #bfbfbf;
+  font-style: italic;
+  display: inline;
+}
+
+.time {
+  padding-left: 10px;
+  position: relative;
+  right: 0px;
+}
+
+.vote {
+  color: #ffffff;
+}
+
+.wish {
+  position: relative;
+  margin: 0 15px 0 15px;
+  padding: 10px;
+}
+
+.wish-text {
+  font-size: 1.2em;
+  border-bottom: 2px solid white;
+  width: 100px;
+}
+
+.tagline {
+  font-family: 'Allerta Stencil', sans-serif;
+}
+

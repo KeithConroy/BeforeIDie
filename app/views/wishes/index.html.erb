@@ -1,0 +1,30 @@
+<div id="header">
+  <h1>Before I die I want to
+    <form id="newWish">
+      <input type="text" name="wish" autocomplete="off" maxlength="140">
+    </form>
+  </h1>
+  <span id="wish-length">140</span> characters remaining
+</div>
+
+<div id="wish_list">
+</div>
+
+<script id="all_wishes" type="text/x-handlebars-template">
+  {{#each wishes}}
+    {{> new_wish }}
+  {{/each}}
+</script>
+
+<script id="new_wish" type="text/x-handlebars-template">
+  <div class="wish">
+    <p><span class="tagline">Before I die I want to</span> <span class="wish-text" style="color: {{color}}">{{text}}</span></p>
+    <div class="underline"></div>
+    <a class="vote" href="/{{id}}/downvote"><i class="fa fa-minus"></i></a>
+    <span class="vote_count">{{votes}}</span>
+    <a class="vote" href="/{{id}}/upvote"><i class="fa fa-plus"></i></a>
+    <p class="time muted">- {{created_at}} from Locations</p>
+  </div>
+</script>
+
+
