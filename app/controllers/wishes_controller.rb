@@ -34,7 +34,7 @@ class WishesController < ApplicationController
   end
 
   def search
-    @wishes = Wish.where("lower(text) LIKE ?", "%#{params[:phrase]}%")
+    @wishes = Wish.where("lower(text) LIKE ?", "%#{params[:phrase]}%").order(created_at: :desc).limit(20)
     render json: @wishes
   end
 

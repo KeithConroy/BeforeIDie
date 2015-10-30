@@ -10,7 +10,26 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <nav class="navbar-custom">
+    <ul class="navbar-left">
+      <h1 class="nav-brand">Before I Die</h1>
+    </ul>
 
+    <ul id="sort-links" class="navbar-right">
+      <a id="todays-top-ten" href="">Today's Top 10</a>
+      <a id="top-ten" href="">Top 10</a>
+      <a id="all" href="">All</a>
+      <input id="search" type="text" name="phrase" autocomplete="off" placeholder="Search">
+    </ul>
+
+  </nav>
+<!--   <div id="sort-links">
+    <a id="todays-top-ten" href="">Today's Top 10</a>
+    <a id="top-ten" href="">Top 10</a>
+    <a id="all" href="">All</a>
+    <input id="search" type="text" name="phrase" autocomplete="off" placeholder="Search">
+  </div>
+ -->
 <div id="main">
 <%= yield %>
 </div>

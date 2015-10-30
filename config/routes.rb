@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root 'wishes#index'
 
+  get 'wishes/search/:phrase' => 'wishes#search'
   get 'wishes/top_ten' => 'wishes#top_ten'
   get 'wishes/todays_top_ten' => 'wishes#todays_top_ten'
 
