@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   root 'wishes#index'
+
+  get 'wishes/top_ten' => 'wishes#top_ten'
+  get 'wishes/todays_top_ten' => 'wishes#todays_top_ten'
+
   resources :wishes
 
   post 'wishes/:id/upvote' => 'wishes#upvote'

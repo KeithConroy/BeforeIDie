@@ -37,4 +37,14 @@ class WishesController < ApplicationController
     @wishes = Wish.where("lower(text) LIKE ?", "%#{params[:phrase]}%")
     render json: @wishes
   end
+
+  def top_ten
+    @wishes = Wish.all.order(votes: :desc).limit(10)
+    render json: @wishes if request.xhr?
+  end
+
+  def todays_top_ten
+    @wishes = Wish.where("created_at > ?", DateTime.now.beginning_of_day).order(votes: :desc).limit(10)
+    render json: @wishes if request.xhr?
+  end
 end

@@ -2,6 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$stencil : 'Allerta Stencil', sans-serif;
+$handwriting : 'Architects Daughter', cursive;
+
 body {
   // background-image: url('Black Chalkboard Background.jpeg');
   // background-image: url('chalkboard_block.png');
@@ -19,10 +22,11 @@ body {
 #header {
   text-align: center;
   >h1{
-    font-family: 'Allerta Stencil', sans-serif;
+    font-family: $stencil;
     font-size: 3em;
     text-shadow: 1px 1px 11px #BABABA;
     color: rgba(255, 255, 255, .9);
+    margin-bottom: 10px;
   }
 }
 
@@ -35,6 +39,7 @@ body {
     color: #ffffff;
     border: none;
     border-bottom: 2px solid rgba(255, 255, 255, .8);
+    font-family: $handwriting;
     &:focus {
       outline:none;
     }
@@ -83,6 +88,7 @@ p {
   // border-bottom: 2px solid white;
   width: 100px;
   padding-left: 10px;
+  font-family: $handwriting;
 }
 
 .sub-wish {
@@ -90,9 +96,20 @@ p {
 }
 
 .tagline {
-  font-family: 'Allerta Stencil', sans-serif;
+  font-family: $stencil;
   font-size: 1.5em;
   text-shadow: 1px 1px 5px #ffffff;
   color: rgba(255, 255, 255, .8);
 }
 
+#sort-links {
+  text-align: center;
+  margin: 30px;
+  > a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 20px;
+    font-family: $handwriting;
+    font-size: 1.5em;
+  }
+}
