@@ -4,7 +4,7 @@
       <input type="text" name="wish" autocomplete="off" maxlength="140">
     </form>
   </h1>
-  <span id="wish-length">140</span> characters remaining
+  <p class="muted"><span id="wish-length">140</span> characters remaining</p>
 </div>
 
 <div id="wish_list">
@@ -20,10 +20,12 @@
   <div class="wish">
     <p><span class="tagline">Before I die I want to</span> <span class="wish-text" style="color: {{color}}">{{text}}</span></p>
     <div class="underline"></div>
-    <a class="vote" href="/{{id}}/downvote"><i class="fa fa-minus"></i></a>
-    <span class="vote_count">{{votes}}</span>
-    <a class="vote" href="/{{id}}/upvote"><i class="fa fa-plus"></i></a>
-    <p class="time muted">- {{created_at}} from Locations</p>
+    <div class="sub-wish">
+      <a class="vote" href="/{{id}}/downvote"><i class="fa fa-minus"></i></a>
+      <span class="vote_count">{{votes}}</span>
+      <a class="vote" href="/{{id}}/upvote"><i class="fa fa-plus"></i></a>
+      <p class="time muted">- {{created_at}}</p>
+    </div>
   </div>
 </script>
 
